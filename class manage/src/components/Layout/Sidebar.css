@@ -1,0 +1,72 @@
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: var(--color-white);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-6);
+    /* Removed fixed positioning here as it's handled by wrapper now, 
+     but keeping the dimensions and internal layout */
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-8);
+    padding: 0 var(--space-2);
+}
+
+.logo-icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-black);
+    border-radius: var(--radius-sm);
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: var(--text-lg);
+    color: var(--color-black);
+    letter-spacing: -0.025em;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    color: var(--color-gray-500);
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: var(--text-sm);
+}
+
+.nav-item:hover {
+    color: var(--color-black);
+    background-color: var(--color-gray-50);
+}
+
+.nav-item.active {
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+.sidebar-footer {
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+.logout-btn {
+    width: 100%;
+    justify-content: flex-start;
+}

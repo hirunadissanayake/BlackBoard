@@ -1,0 +1,140 @@
+/* Existing styles... */
+
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-6);
+}
+
+@media (max-width: 480px) {
+    .assignments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.assignment-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.assignment-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.icon-box {
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.assignment-title {
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--space-1);
+}
+
+.course-name {
+    font-size: var(--text-xs);
+    color: var(--color-gray-500);
+}
+
+.assignment-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+}
+
+.a-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+}
+
+.assignment-footer {
+    margin-top: auto;
+}
+
+/* Modal Styles Reuse (Copying from ClassList/Students for self-containment) */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background-color: var(--color-white);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+}
+
+.modal-header h2 {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--color-black);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+}

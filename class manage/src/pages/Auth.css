@@ -1,0 +1,130 @@
+.auth-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--color-white);
+}
+
+.auth-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8);
+}
+
+.auth-right {
+    flex: 1;
+    background-image: url('../assets/dashboard-banner.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: none;
+    /* Hidden on mobile */
+}
+
+@media (min-width: 1024px) {
+    .auth-right {
+        display: block;
+    }
+}
+
+.auth-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: grayscale(100%);
+}
+
+.auth-form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.auth-header h1 {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: var(--space-2);
+    letter-spacing: -0.025em;
+}
+
+.auth-subtitle {
+    color: var(--color-gray-500);
+    font-size: var(--text-base);
+}
+
+.auth-error {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    text-align: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.form-group label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.form-group input {
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    color: var(--color-black);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--color-black);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-auth {
+    width: 100%;
+    padding: var(--space-3);
+    font-size: var(--text-base);
+    margin-top: var(--space-2);
+}
+
+.btn-auth:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.auth-footer {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+}
+
+.auth-footer a {
+    color: var(--color-black);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.auth-footer a:hover {
+    color: var(--color-gray-700);
+}
